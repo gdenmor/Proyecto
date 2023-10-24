@@ -1,13 +1,13 @@
 <?php
     class TRYS{
         private $idTry;
-        private $idUser;
+        private $Usuario;
         private $fecha;
         private $JSONrespuestas;
 
-        public function __construct($idTry, $idUser, $fecha,$JSONrespuestas){
+        public function __construct($idTry, $User, $fecha,$JSONrespuestas){
             $this->idTry = $idTry;
-            $this->idUser = $idUser;
+            $this->Usuario = $User;
             $this->fecha = $fecha;
             $this->JSONrespuestas = json_decode($JSONrespuestas);
         }
@@ -21,7 +21,7 @@
         }
 
         public function getidUser(){
-            return $this->idUser;
+            return $this->Usuario;
         }
 
         public function setJsonFileRespuestas($jsonRespuestas){
